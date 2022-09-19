@@ -1,0 +1,55 @@
+@use "../../scss/" as *;
+
+header {
+  padding-top: 3rem;
+  height: 100vh;
+  overflow: hidden;
+}
+.container-header {
+  text-align: center;
+  position: relative;
+  height: 100%;
+
+  .cta {
+    @include flex();
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .me {
+    position: absolute;
+    width: 22rem;
+    height: 30rem;
+    background: linear-gradient($color-primary, transparent);
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 12rem 12rem 0 0;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .social {
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 2rem;
+      background-color: $color-primary;
+    }
+  }
+  .scroll {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+}
