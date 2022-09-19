@@ -1,0 +1,101 @@
+@use "../../scss/" as *;
+
+.container-about {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      $color-primary,
+      transparent
+    );
+    display: grid;
+    place-items: center;
+
+    @include tablet {
+      width: 50%;
+      margin: 2rem auto 4rem;
+    }
+
+    @include mobile {
+      width: 65%;
+      margin: 0 auto 3rem;
+    }
+
+    img {
+      border-radius: 2rem;
+      overflow: hidden;
+      transform: rotate(10deg);
+      transition: $tranSition;
+
+      &:hover {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .content {
+    @include tablet {
+      margin: 2rem auto 4rem;
+      text-align: center;
+    }
+
+    .content-cards {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include mobile {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .card {
+        background-color: $color-bg-variant;
+        border: 1px solid transparent;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        transition: $tranSition;
+
+        &:hover {
+          background-color: transparent;
+          border-color: $color-primary-variant;
+        }
+
+        .icon {
+          color: $color-primary;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+        h5 {
+          font-size: 0.95rem;
+        }
+
+        small {
+          font-size: 0.7rem;
+        }
+      }
+    }
+    p {
+      margin: 2rem 0 2.6rem;
+
+      @include tablet {
+        margin: 1rem 0 1.5rem;
+      }
+
+      @include mobile {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}

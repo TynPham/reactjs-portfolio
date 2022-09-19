@@ -4,6 +4,13 @@ header {
   padding-top: 3rem;
   height: 100vh;
   overflow: hidden;
+
+  @include tablet {
+    height: 68vh;
+  }
+  @include mobile {
+    height: 100vh;
+  }
 }
 .container-header {
   text-align: center;
@@ -37,6 +44,10 @@ header {
     flex-direction: column;
     gap: 0.8rem;
 
+    @include mobile {
+      display: none;
+    }
+
     &::after {
       content: "";
       width: 1px;
@@ -51,5 +62,9 @@ header {
     transform: rotate(90deg);
     font-size: 0.9rem;
     font-weight: 200;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
