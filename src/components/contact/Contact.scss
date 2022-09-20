@@ -1,0 +1,64 @@
+@use "../../scss/" as *;
+
+.container.container-contact {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @include mobile {
+    width: $container-width-mobile;
+  }
+
+  .options {
+    @include flex(unset, unset);
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .option {
+      background-color: $color-bg-variant;
+      padding: 1.2rem;
+      border-radius: 1.2rem;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: $tranSition;
+
+      &:hover {
+        background-color: transparent;
+        border-color: $color-primary-variant;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      a {
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  form {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 1.2rem;
+
+    input,
+    textarea {
+      width: 100% !important;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: transparent;
+      border: 2px solid $color-primary-variant;
+      resize: none;
+      color: $color-white;
+    }
+  }
+}

@@ -54,7 +54,7 @@ const data = [
 
 const Porfolio = () => {
   return (
-    <section>
+    <section id="portfolio">
       <h5>My Recent Wolk</h5>
       <h2>Porfolio</h2>
 
@@ -66,10 +66,20 @@ const Porfolio = () => {
             </div>
             <h3 className="content">{item.title}</h3>
             <div className="demo">
-              <a href={item.github} className="github btn" target="_blank">
+              <a
+                href={item.github}
+                className="github btn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Github
               </a>
-              <a href={item.demo} className="btn btn-primary" target="_blank">
+              <a
+                href={item.demo}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Live Demo
               </a>
             </div>

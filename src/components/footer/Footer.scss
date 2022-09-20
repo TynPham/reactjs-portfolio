@@ -1,0 +1,62 @@
+@use "../../scss/" as *;
+
+.footer {
+  background-color: $color-primary;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+
+  a {
+    color: $color-bg;
+  }
+
+  &-logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+
+  .permalinks {
+    @include flex(unset, center);
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &-social {
+    @include flex(unset);
+    gap: 1rem;
+    margin-bottom: 4rem;
+
+    @include mobile {
+      margin-bottom: 2.6rem;
+    }
+
+    a {
+      background-color: $color-bg;
+      color: $color-white;
+      padding: 0.8rem;
+      border-radius: 0.7rem;
+      @include flex(unset, unset);
+      border: 1px solid transparent;
+      transition: $tranSition;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-bg;
+        border-color: $color-bg;
+      }
+    }
+  }
+  &-copyright {
+    margin-bottom: 4rem;
+    color: $color-bg;
+  }
+}

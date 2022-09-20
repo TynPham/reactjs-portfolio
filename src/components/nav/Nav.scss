@@ -23,8 +23,8 @@
     color: $color-light;
 
     &.active {
-      background: $color-bg;
-      color: $color-white;
+      background: $color-primary;
+      color: $color-bg;
     }
 
     &:hover {
