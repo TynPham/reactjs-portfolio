@@ -1,0 +1,44 @@
+@use "../../scss/" as *;
+
+.container.container-testimonial {
+  width: 40%;
+  padding-bottom: 4rem;
+
+  @include tablet {
+    width: 60%;
+  }
+
+  @include mobile {
+    width: 90%;
+  }
+
+  .testimonial {
+    user-select: none;
+    padding: 2rem;
+    background-color: $color-bg-variant;
+    border-radius: 2rem;
+    text-align: center;
+    .image {
+      width: 4rem;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      border: 0.4rem solid $color-primary-variant;
+    }
+
+    small {
+      color: $color-light;
+      font-size: 300;
+      display: block;
+      margin: 0.8rem auto 0;
+
+      @include mobile {
+        width: 90%;
+      }
+    }
+  }
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $color-primary;
+}

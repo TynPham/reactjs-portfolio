@@ -1,0 +1,62 @@
+@use "../../scss/" as *;
+
+.container-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .details {
+    background-color: $color-bg-variant;
+    border-radius: 0 0 2rem 2rem;
+    height: fit-content;
+    border: 1px solid transparent;
+    transition: $tranSition;
+
+    @include tablet {
+      height: auto;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: $color-primary-variant;
+    }
+
+    .header {
+      background-color: $color-primary;
+      padding: 2rem;
+      border-radius: 0 0 2rem 2rem;
+      box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+      h3 {
+        text-align: center;
+        color: $color-bg;
+        font-size: 1rem;
+      }
+    }
+    .content {
+      padding: 2rem;
+
+      .content-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+      }
+      .icon {
+        color: $color-primary;
+        margin-top: 2px;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

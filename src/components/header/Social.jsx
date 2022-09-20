@@ -8,13 +8,13 @@ import {
 const Social = () => {
   return (
     <div className="social">
-      <a href="https://www.linkedin.com/">
+      <a target="_blank" href="https://www.linkedin.com/">
         <AiFillLinkedin />
       </a>
-      <a href="https://github.com/">
+      <a target="_blank" href="https://github.com/">
         <AiFillGithub />
       </a>
-      <a href="https://dribbble.com/">
+      <a target="_blank" href="https://dribbble.com/">
         <AiFillDribbbleCircle />
       </a>
     </div>

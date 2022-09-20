@@ -31,18 +31,18 @@ const Nav = () => {
         <BiBook />
       </a>
       <a
+        href="#services"
+        className={`${active === "#services" ? "active" : ""}`}
+        onClick={() => setActive("#services")}
+      >
+        <BiMessageAltDetail />
+      </a>
+      <a
         href="#contact"
         className={`${active === "#contact" ? "active" : ""}`}
         onClick={() => setActive("#contact")}
       >
         <RiServiceFill />
-      </a>
-      <a
-        href="#footer"
-        className={`${active === "#footer" ? "active" : ""}`}
-        onClick={() => setActive("#footer")}
-      >
-        <BiMessageAltDetail />
       </a>
     </nav>
   );

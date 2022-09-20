@@ -43,7 +43,7 @@ const About = () => {
             amet consectetur adipisicing edit.
           </p>
 
-          <a href="#contact" className="btn btn-primary">
+          <a href="#contact" className="btn btn-primary" target="_blank">
             Let's Talk
           </a>
         </div>
